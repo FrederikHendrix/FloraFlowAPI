@@ -34,4 +34,10 @@ public class arduinoplantController {
     public arduinoplant findArduinoPlantById(@PathVariable int id){
         return service.getArduinoPlantById(id);
     }
+
+    @DeleteMapping(value = "/delete/arduinoplant/{id}")
+    public String deleteArduinoPlantById(@PathVariable int id){
+        service.deleteArduinoPlant(id);
+        return "Delete" + id;
+    }
 }

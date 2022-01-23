@@ -20,6 +20,7 @@ public class arduinoplantService {
     public List<arduinoplant> getArduinoPlant() {
         return arduinoplantRepository.findAll();
     }
+
     public arduinoplant getArduinoPlantById(int id){
         return arduinoplantRepository.findById(id).orElse(null);
     }
@@ -36,5 +37,10 @@ public class arduinoplantService {
         existingArduinoPlant.setPlantstate(arduinoplant.getPlantstate());
         existingArduinoPlant.setPumpstate(arduinoplant.getPumpstate());
         return arduinoplantRepository.save(existingArduinoPlant);
+    }
+
+    public String deleteArduinoPlant(int id){
+        arduinoplantRepository.deleteById(id);
+        return "Delete" + id;
     }
 }

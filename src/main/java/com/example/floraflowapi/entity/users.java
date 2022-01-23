@@ -4,19 +4,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class user {
+public class users {
     @Id
     private int id;
     private String username;
     private String password;
 
-    public user(int id, String username, String password) {
+    public users(int id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
-    public user()
+    public users()
     {
 
     }

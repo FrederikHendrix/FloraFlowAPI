@@ -1,6 +1,6 @@
 package com.example.floraflowapi.service;
 
-import com.example.floraflowapi.entity.user;
+import com.example.floraflowapi.entity.users;
 import com.example.floraflowapi.repository.userRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class userService {
         this.userRepository = userRepository;
     }
 
-    public List<user> getUser(){
+    public List<users> getUser(){
         return userRepository.findAll();
     }
 }

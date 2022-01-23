@@ -1,6 +1,6 @@
 package com.example.floraflowapi.controller;
 
-import com.example.floraflowapi.entity.user;
+import com.example.floraflowapi.entity.users;
 import com.example.floraflowapi.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,7 @@ public class userController {
     private userService service;
 
     @GetMapping(value ="user")
-    public List<user> findAllUsers(){
+    public List<users> findAllUsers(){
         return service.getUser();
     }
 
